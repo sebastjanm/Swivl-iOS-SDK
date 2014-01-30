@@ -1,0 +1,6 @@
+platform :ios, '6.1'
+ 
+target :HelloSwivl do
+    pod 'Swivl-iOS-SDK',  :git => "git@github.com:Swivl/Swivl-iOS-SDK.git", :tag => "0.0.7"
+end
+

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Hello Swivl View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="HelloSwivlViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FMj-Hw-2Va"/>
+                        <viewControllerLayoutGuide type="bottom" id="XSU-tO-QHE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Control Panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-0l-0bx">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="FWVersion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-YH-T27">
+                                <rect key="frame" x="20" y="49" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Marker battery" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-oc-9kk">
+                                <rect key="frame" x="25" y="81" width="133" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="adg-wz-Wn5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="battery-80.png" translatesAutoresizingMaskIntoConstraints="NO" id="f2E-aq-xW7">
+                                <rect key="frame" x="186" y="78" width="109" height="28"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swivl battery" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTP-ox-dIZ">
+                                <rect key="frame" x="25" y="117" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6DJ-m6-VQV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="battery-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="B3O-dr-kCK">
+                                <rect key="frame" x="186" y="114" width="109" height="28"/>
+                            </imageView>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0O8-UE-c58">
+                                <rect key="frame" x="126" y="150" width="174" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="hnH-oy-Ql8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Tracking"/>
+                                    <segment title="Panning"/>
+                                </segments>
+                                <connections>
+                                    <action selector="swivlModeSegmentChanged:" destination="2" eventType="valueChanged" id="3I9-Qy-bOp"/>
+                                </connections>
+                            </segmentedControl>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swivl mode" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrz-cb-Ubk">
+                                <rect key="frame" x="25" y="154" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-vZ-yl0">
+                                <rect key="frame" x="126" y="254" width="174" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Sports"/>
+                                </segments>
+                                <connections>
+                                    <action selector="trackingSpeedSegmentChanged:" destination="2" eventType="valueChanged" id="1pK-uL-nQN"/>
+                                </connections>
+                            </segmentedControl>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track Speed" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIM-0P-PUm">
+                                <rect key="frame" x="20" y="258" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Js4-P1-xst"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Automatic Tilt" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRr-uZ-DY9">
+                                <rect key="frame" x="22" y="215" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="zj0-YI-4oA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bcd-bZ-prU">
+                                <rect key="frame" x="251" y="215" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="2" eventType="valueChanged" id="4Bj-GI-cpz"/>
+                                </connections>
+                            </switch>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mode Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfG-vk-fHH">
+                                <rect key="frame" x="46" y="186" width="228" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="3KC-nx-nad"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pan Program Repeats" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju8-Nt-yAA">
+                                <rect key="frame" x="20" y="254" width="180" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="MV6-wP-baD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-I4-gqq" userLabel="Switch - Pan Program Repeats">
+                                <rect key="frame" x="251" y="254" width="51" height="31"/>
+                                <connections>
+                                    <action selector="programRepeatsSwitchChanged:" destination="2" eventType="valueChanged" id="UK5-JH-HdA"/>
+                                </connections>
+                            </switch>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7J-y7-p1D" userLabel="Button - Run Programmed Pan">
+                                <rect key="frame" x="20" y="430" width="280" height="30"/>
+                                <state key="normal" title="Run Programmed Pan Program">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="runPanProgramButtonPressed:" destination="2" eventType="touchUpInside" id="xwM-D2-V6N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tTP-ox-dIZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="117" id="0c0-4G-uaG"/>
+                            <constraint firstItem="IRr-uZ-DY9" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="22" id="0li-gb-Ara"/>
+                            <constraint firstItem="f2E-aq-xW7" firstAttribute="top" secondItem="ub2-YH-T27" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ud-pu-26r"/>
+                            <constraint firstItem="Wrz-cb-Ubk" firstAttribute="trailing" secondItem="tTP-ox-dIZ" secondAttribute="trailing" id="6jK-88-AsS"/>
+                            <constraint firstItem="ub2-YH-T27" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="9pB-q5-i9K"/>
+                            <constraint firstAttribute="bottom" secondItem="A7J-y7-p1D" secondAttribute="bottom" constant="108" id="Bwg-78-8gu"/>
+                            <constraint firstAttribute="trailing" secondItem="mEW-I4-gqq" secondAttribute="trailing" constant="20" symbolic="YES" id="Byr-fX-0X4"/>
+                            <constraint firstItem="IRr-uZ-DY9" firstAttribute="top" secondItem="jfG-vk-fHH" secondAttribute="bottom" constant="8" symbolic="YES" id="IOj-A3-kpD"/>
+                            <constraint firstAttribute="trailing" secondItem="bcd-bZ-prU" secondAttribute="trailing" constant="20" symbolic="YES" id="IsY-81-OxK"/>
+                            <constraint firstItem="B3O-dr-kCK" firstAttribute="top" secondItem="f2E-aq-xW7" secondAttribute="bottom" constant="8" symbolic="YES" id="JTM-1l-wbK"/>
+                            <constraint firstAttribute="trailing" secondItem="A7J-y7-p1D" secondAttribute="trailing" constant="20" symbolic="YES" id="JjH-nU-zIp"/>
+                            <constraint firstItem="f2E-aq-xW7" firstAttribute="leading" secondItem="B3O-dr-kCK" secondAttribute="leading" id="Jqb-LA-DDw"/>
+                            <constraint firstItem="eIM-0P-PUm" firstAttribute="centerY" secondItem="eVz-vZ-yl0" secondAttribute="centerY" id="NAV-pF-f3W"/>
+                            <constraint firstItem="ub2-YH-T27" firstAttribute="top" secondItem="EnP-0l-0bx" secondAttribute="bottom" constant="8" symbolic="YES" id="O4d-XY-wzb"/>
+                            <constraint firstItem="mEW-I4-gqq" firstAttribute="top" secondItem="bcd-bZ-prU" secondAttribute="bottom" constant="8" symbolic="YES" id="R6Q-7h-5Pw"/>
+                            <constraint firstItem="jfG-vk-fHH" firstAttribute="top" secondItem="0O8-UE-c58" secondAttribute="bottom" constant="8" symbolic="YES" id="Rq9-0a-qcw"/>
+                            <constraint firstAttribute="trailing" secondItem="ub2-YH-T27" secondAttribute="trailing" constant="20" symbolic="YES" id="Rs9-XA-NYx"/>
+                            <constraint firstItem="EnP-0l-0bx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="TCO-tc-nhh"/>
+                            <constraint firstItem="eVz-vZ-yl0" firstAttribute="top" secondItem="bcd-bZ-prU" secondAttribute="bottom" constant="8" symbolic="YES" id="TKB-us-gQ4"/>
+                            <constraint firstItem="bcd-bZ-prU" firstAttribute="top" secondItem="jfG-vk-fHH" secondAttribute="bottom" constant="8" symbolic="YES" id="ULs-oW-Uob"/>
+                            <constraint firstItem="jfG-vk-fHH" firstAttribute="centerX" secondItem="ub2-YH-T27" secondAttribute="centerX" id="WR1-bT-Zoz"/>
+                            <constraint firstItem="EnP-0l-0bx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="X26-2S-8d9"/>
+                            <constraint firstAttribute="trailing" secondItem="EnP-0l-0bx" secondAttribute="trailing" constant="20" symbolic="YES" id="XMn-Qy-n1X"/>
+                            <constraint firstItem="IPx-oc-9kk" firstAttribute="leading" secondItem="tTP-ox-dIZ" secondAttribute="leading" id="aDv-t1-dtE"/>
+                            <constraint firstItem="eIM-0P-PUm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="aok-Ro-OKz"/>
+                            <constraint firstItem="Wrz-cb-Ubk" firstAttribute="leading" secondItem="tTP-ox-dIZ" secondAttribute="leading" id="bHE-lu-geM"/>
+                            <constraint firstItem="IPx-oc-9kk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="25" id="bIH-fF-H0v"/>
+                            <constraint firstItem="ju8-Nt-yAA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="bJC-RS-2VX"/>
+                            <constraint firstAttribute="trailing" secondItem="0O8-UE-c58" secondAttribute="trailing" constant="20" symbolic="YES" id="bwA-JC-ebV"/>
+                            <constraint firstAttribute="trailing" secondItem="f2E-aq-xW7" secondAttribute="trailing" constant="25" id="byl-YB-NHS"/>
+                            <constraint firstItem="ju8-Nt-yAA" firstAttribute="top" secondItem="mEW-I4-gqq" secondAttribute="top" id="cRb-tw-sgF"/>
+                            <constraint firstItem="Wrz-cb-Ubk" firstAttribute="centerY" secondItem="0O8-UE-c58" secondAttribute="centerY" id="hzK-S6-sRP"/>
+                            <constraint firstItem="IPx-oc-9kk" firstAttribute="top" secondItem="3" secondAttribute="top" constant="81" id="jhK-JP-KhH"/>
+                            <constraint firstAttribute="trailing" secondItem="eVz-vZ-yl0" secondAttribute="trailing" constant="20" symbolic="YES" id="kqf-iC-Cf8"/>
+                            <constraint firstItem="A7J-y7-p1D" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="lgR-Ng-qYr"/>
+                            <constraint firstItem="0O8-UE-c58" firstAttribute="top" secondItem="B3O-dr-kCK" secondAttribute="bottom" constant="8" symbolic="YES" id="rtK-yB-CeB"/>
+                            <constraint firstItem="eVz-vZ-yl0" firstAttribute="leading" secondItem="0O8-UE-c58" secondAttribute="leading" id="zAG-Ly-s1p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="m_fwVersion" destination="ub2-YH-T27" id="VIT-8Y-jsz"/>
+                        <outlet property="m_markerBatteryLevel" destination="IPx-oc-9kk" id="9s9-Gu-zKc"/>
+                        <outlet property="m_markerBatteryLevelMeter" destination="f2E-aq-xW7" id="Cm1-ox-ZS4"/>
+                        <outlet property="m_modeOptions" destination="jfG-vk-fHH" id="8xd-0w-LD8"/>
+                        <outlet property="m_programRepeatsSwitch" destination="mEW-I4-gqq" id="zR4-kC-v0U"/>
+                        <outlet property="m_programRepeatsSwitchLabel" destination="ju8-Nt-yAA" id="fGu-Tu-ahW"/>
+                        <outlet property="m_runPanProgramButton" destination="A7J-y7-p1D" id="xmi-CG-tbw"/>
+                        <outlet property="m_status" destination="EnP-0l-0bx" id="gYO-pl-qh5"/>
+                        <outlet property="m_switchLabel" destination="IRr-uZ-DY9" id="cdu-MU-PuT"/>
+                        <outlet property="m_swivlBatteryLevel" destination="tTP-ox-dIZ" id="U3f-nK-dD5"/>
+                        <outlet property="m_swivlBatteryLevelMeter" destination="B3O-dr-kCK" id="KER-p3-yQL"/>
+                        <outlet property="m_swivlMode" destination="Wrz-cb-Ubk" id="oBt-b6-boN"/>
+                        <outlet property="m_swivlModeSwitch" destination="0O8-UE-c58" id="z4L-5S-3eF"/>
+                        <outlet property="m_theSwitch" destination="bcd-bZ-prU" id="WQa-h1-gIS"/>
+                        <outlet property="m_trackSpeed" destination="eIM-0P-PUm" id="K0s-rb-Dh0"/>
+                        <outlet property="m_trackSpeedSwitch" destination="eVz-vZ-yl0" id="Knl-FL-I2o"/>
+                        <segue destination="km5-DZ-0ey" kind="modal" identifier="segue" modalTransitionStyle="flipHorizontal" id="bWM-Fq-vWu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Hello Swivl Record View Controller-->
+        <scene sceneID="fpr-Rs-0Ss">
+            <objects>
+                <viewController id="km5-DZ-0ey" customClass="HelloSwivlRecordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zUy-3l-qqD"/>
+                        <viewControllerLayoutGuide type="bottom" id="mjn-TB-fdF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fq0-Qa-Idy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recording Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DW-eG-93l">
+                                <rect key="frame" x="80" y="20" width="161" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="TjV-ny-qXw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="record_button_hi.png" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-gh-J9h">
+                                <rect key="frame" x="141" y="265" width="38" height="38"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="recording_active.png" translatesAutoresizingMaskIntoConstraints="NO" id="z1F-e8-YR1">
+                                <rect key="frame" x="141" y="265" width="38" height="38"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDg-3d-ZP4">
+                                <rect key="frame" x="132" y="256" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="1my-1A-AJt"/>
+                                    <constraint firstAttribute="width" constant="56" id="aQ0-CT-e8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="record_button_hi.png"/>
+                                <state key="highlighted" image="record_button_hi.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="km5-DZ-0ey" eventType="touchUpInside" id="ctI-5H-F3H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z1F-e8-YR1" firstAttribute="centerY" secondItem="fq0-Qa-Idy" secondAttribute="centerY" id="4DX-EV-wlG"/>
+                            <constraint firstItem="IDg-3d-ZP4" firstAttribute="centerX" secondItem="fq0-Qa-Idy" secondAttribute="centerX" id="IEb-BS-iSw"/>
+                            <constraint firstItem="z1F-e8-YR1" firstAttribute="leading" secondItem="hFc-gh-J9h" secondAttribute="leading" id="gd5-Eq-082"/>
+                            <constraint firstItem="z1F-e8-YR1" firstAttribute="centerX" secondItem="IDg-3d-ZP4" secondAttribute="centerX" id="qnX-Yn-07b"/>
+                            <constraint firstItem="IDg-3d-ZP4" firstAttribute="centerY" secondItem="hFc-gh-J9h" secondAttribute="centerY" id="sjy-TL-HD1"/>
+                            <constraint firstItem="9DW-eG-93l" firstAttribute="top" secondItem="fq0-Qa-Idy" secondAttribute="top" constant="20" symbolic="YES" id="vP3-iz-Uif"/>
+                            <constraint firstItem="z1F-e8-YR1" firstAttribute="centerX" secondItem="9DW-eG-93l" secondAttribute="centerX" id="xis-w6-Czl"/>
+                            <constraint firstItem="hFc-gh-J9h" firstAttribute="top" secondItem="z1F-e8-YR1" secondAttribute="top" id="zoE-Ln-lF7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="m_recordButton" destination="IDg-3d-ZP4" id="sN1-R3-2yc"/>
+                        <outlet property="m_recordButtonHilite" destination="hFc-gh-J9h" id="Ull-4u-6NU"/>
+                        <outlet property="m_recordingActiveHilite" destination="z1F-e8-YR1" id="5Ff-az-ZR4"/>
+                        <segue destination="2" kind="modal" identifier="goBack" modalTransitionStyle="flipHorizontal" id="ZCk-7V-TXd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvf-T1-H3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="battery-60.png" width="109" height="28"/>
+        <image name="battery-80.png" width="109" height="28"/>
+        <image name="record_button_hi.png" width="38" height="38"/>
+        <image name="recording_active.png" width="38" height="38"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
