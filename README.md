@@ -7,18 +7,18 @@ How To Get Started
 ---
 1. In your pod file:
 
-    ```
+    ```ruby
 pod 'Swivl-iOS-SDK',  :git => "git@github.com:Swivl/Swivl-iOS-SDK.git"
 ```
 2. Install the dependencies in your project:
 
-   ```
+   ```bash
 $ pod install
 ```
 3. Add ``` #import "SwivlCommonLib.h" ``` to your project.
 4. Create ```SwivlCommonLib``` object:
     
-    ```objc 
+    ```objc
 SwivlCommonLib *swivl = [SwivlCommonLib sharedSwivlBaseForDelegate:self]; 
 ```
 5. Implement SwivlBaseDelegate protocol
