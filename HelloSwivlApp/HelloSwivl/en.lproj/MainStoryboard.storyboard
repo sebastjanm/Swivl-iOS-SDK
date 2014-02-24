@@ -69,24 +69,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-vZ-yl0">
-                                <rect key="frame" x="126" y="254" width="174" height="29"/>
-                                <segments>
-                                    <segment title="Normal"/>
-                                    <segment title="Sports"/>
-                                </segments>
-                                <connections>
-                                    <action selector="trackingSpeedSegmentChanged:" destination="2" eventType="valueChanged" id="1pK-uL-nQN"/>
-                                </connections>
-                            </segmentedControl>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Track Speed" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIM-0P-PUm">
-                                <rect key="frame" x="20" y="258" width="120" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Js4-P1-xst"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Automatic Tilt" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRr-uZ-DY9">
                                 <rect key="frame" x="22" y="215" width="120" height="21"/>
                                 <constraints>
@@ -148,19 +130,16 @@
                             <constraint firstItem="B3O-dr-kCK" firstAttribute="top" secondItem="f2E-aq-xW7" secondAttribute="bottom" constant="8" symbolic="YES" id="JTM-1l-wbK"/>
                             <constraint firstAttribute="trailing" secondItem="A7J-y7-p1D" secondAttribute="trailing" constant="20" symbolic="YES" id="JjH-nU-zIp"/>
                             <constraint firstItem="f2E-aq-xW7" firstAttribute="leading" secondItem="B3O-dr-kCK" secondAttribute="leading" id="Jqb-LA-DDw"/>
-                            <constraint firstItem="eIM-0P-PUm" firstAttribute="centerY" secondItem="eVz-vZ-yl0" secondAttribute="centerY" id="NAV-pF-f3W"/>
                             <constraint firstItem="ub2-YH-T27" firstAttribute="top" secondItem="EnP-0l-0bx" secondAttribute="bottom" constant="8" symbolic="YES" id="O4d-XY-wzb"/>
                             <constraint firstItem="mEW-I4-gqq" firstAttribute="top" secondItem="bcd-bZ-prU" secondAttribute="bottom" constant="8" symbolic="YES" id="R6Q-7h-5Pw"/>
                             <constraint firstItem="jfG-vk-fHH" firstAttribute="top" secondItem="0O8-UE-c58" secondAttribute="bottom" constant="8" symbolic="YES" id="Rq9-0a-qcw"/>
                             <constraint firstAttribute="trailing" secondItem="ub2-YH-T27" secondAttribute="trailing" constant="20" symbolic="YES" id="Rs9-XA-NYx"/>
                             <constraint firstItem="EnP-0l-0bx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" id="TCO-tc-nhh"/>
-                            <constraint firstItem="eVz-vZ-yl0" firstAttribute="top" secondItem="bcd-bZ-prU" secondAttribute="bottom" constant="8" symbolic="YES" id="TKB-us-gQ4"/>
                             <constraint firstItem="bcd-bZ-prU" firstAttribute="top" secondItem="jfG-vk-fHH" secondAttribute="bottom" constant="8" symbolic="YES" id="ULs-oW-Uob"/>
                             <constraint firstItem="jfG-vk-fHH" firstAttribute="centerX" secondItem="ub2-YH-T27" secondAttribute="centerX" id="WR1-bT-Zoz"/>
                             <constraint firstItem="EnP-0l-0bx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="X26-2S-8d9"/>
                             <constraint firstAttribute="trailing" secondItem="EnP-0l-0bx" secondAttribute="trailing" constant="20" symbolic="YES" id="XMn-Qy-n1X"/>
                             <constraint firstItem="IPx-oc-9kk" firstAttribute="leading" secondItem="tTP-ox-dIZ" secondAttribute="leading" id="aDv-t1-dtE"/>
-                            <constraint firstItem="eIM-0P-PUm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="aok-Ro-OKz"/>
                             <constraint firstItem="Wrz-cb-Ubk" firstAttribute="leading" secondItem="tTP-ox-dIZ" secondAttribute="leading" id="bHE-lu-geM"/>
                             <constraint firstItem="IPx-oc-9kk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="25" id="bIH-fF-H0v"/>
                             <constraint firstItem="ju8-Nt-yAA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="bJC-RS-2VX"/>
@@ -169,10 +148,8 @@
                             <constraint firstItem="ju8-Nt-yAA" firstAttribute="top" secondItem="mEW-I4-gqq" secondAttribute="top" id="cRb-tw-sgF"/>
                             <constraint firstItem="Wrz-cb-Ubk" firstAttribute="centerY" secondItem="0O8-UE-c58" secondAttribute="centerY" id="hzK-S6-sRP"/>
                             <constraint firstItem="IPx-oc-9kk" firstAttribute="top" secondItem="3" secondAttribute="top" constant="81" id="jhK-JP-KhH"/>
-                            <constraint firstAttribute="trailing" secondItem="eVz-vZ-yl0" secondAttribute="trailing" constant="20" symbolic="YES" id="kqf-iC-Cf8"/>
                             <constraint firstItem="A7J-y7-p1D" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="lgR-Ng-qYr"/>
                             <constraint firstItem="0O8-UE-c58" firstAttribute="top" secondItem="B3O-dr-kCK" secondAttribute="bottom" constant="8" symbolic="YES" id="rtK-yB-CeB"/>
-                            <constraint firstItem="eVz-vZ-yl0" firstAttribute="leading" secondItem="0O8-UE-c58" secondAttribute="leading" id="zAG-Ly-s1p"/>
                         </constraints>
                     </view>
                     <connections>
@@ -190,8 +167,6 @@
                         <outlet property="m_swivlMode" destination="Wrz-cb-Ubk" id="oBt-b6-boN"/>
                         <outlet property="m_swivlModeSwitch" destination="0O8-UE-c58" id="z4L-5S-3eF"/>
                         <outlet property="m_theSwitch" destination="bcd-bZ-prU" id="WQa-h1-gIS"/>
-                        <outlet property="m_trackSpeed" destination="eIM-0P-PUm" id="K0s-rb-Dh0"/>
-                        <outlet property="m_trackSpeedSwitch" destination="eVz-vZ-yl0" id="Knl-FL-I2o"/>
                         <segue destination="km5-DZ-0ey" kind="modal" identifier="segue" modalTransitionStyle="flipHorizontal" id="bWM-Fq-vWu"/>
                     </connections>
                 </viewController>
