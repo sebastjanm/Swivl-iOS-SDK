@@ -103,9 +103,4 @@ HelloSwivlAppDelegate* g_appDelegate = nil;
     [[NSNotificationCenter defaultCenter] postNotification:event];
 }
 
-- (void) appTagsRecording
-{
-	NSLog(@"SwivlCommonLib has called %s [This function is deprecated!]", __FUNCTION__);
-}
-
 @end
