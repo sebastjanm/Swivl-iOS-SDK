@@ -5,6 +5,8 @@ Swivl SDK for Swivl 2 hardware
 
 How To Get Started
 ---
+0. Add to ```info.plist``` a ```Supported external accessory protocols``` item with the value ```com.swivl.base```
+
 1. In your pod file:
 
     ```ruby
