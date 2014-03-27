@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PanningProgram.h"
+#import "MotionDescriptor.h"
 
 /* 
  * The library assumes the app has defined the following
@@ -42,6 +43,14 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 - (BOOL) appAtRecordingView;                    // Returns YES if app UI is at the recording view; NO otherwise.
 - (void) transitionAppToRecordingView;          // Requests that the app transition itself (programmatically) to the recording view.
 - (void) appTagsRecording;                      // (obsolete?) 
+
+- (void) swivlMoveFinished: (UInt32)state withID:(UInt32)ID;
+
+- (void) swivlScriptBufferState: (UInt8)state isRunning:(BOOL)isRunning;
+- (void) swivlScriptResult: (SInt8)thread Result:(SInt8)res Run:(UInt16)run Stack:(UInt32)stack;
+
+@optional //This metods works only on PRO version of LIB
+- (void) baseAudioJackStateChanged: (BOOL)pluggedin;
 @end
 
 @interface SwivlCommonLib : NSObject
@@ -63,5 +72,17 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 // Called whenever the UI indicates that the user has left the screen where 
 // tracking or programmed pan settings are changed
 - (void) updateBaseSettings:(PanningProgram *) program;
+- (BOOL) baseAudioJackState;
+
+- (void) swivlMoveBase: (MotionDescriptor*)move;
+- (void) swivlStartPan: (BOOL)pan andTilt:(BOOL)tilt;
+- (void) swivlResetPosition;
+- (UInt32) swivlLastFinishedMoveId;
+- (UInt32) swivlMoveState;
+
+- (int)  swivlScriptLoadBlock: (char*)data length:(int)length;
+- (void) swivlScriptRequestBufferState;
+- (void) swivlScriptStartThread;
+- (void) swivlScriptStop;
 
 @end
