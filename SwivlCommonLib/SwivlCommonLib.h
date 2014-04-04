@@ -17,6 +17,8 @@
 
 extern NSString* AVSandboxSwivlDockAttached;
 extern NSString* AVSandboxSwivlDockDetached;
+extern NSString* AVSandboxMarkerBatteryLevelChanged;
+extern NSString* AVSandboxBaseBatteryLevelChanged;
 extern NSString* AVSandboxRecordingStoppedNotification; // Recording stopped for some reason (user, error, etc.)
 extern NSString* AVSandboxRecordingStartedNotification; // Recording has started
 extern NSString* AVSandboxFastTrackingEnabledStateChangedNotification; // to update the dock
@@ -64,6 +66,7 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 @property (readonly) NSNumber *deprecatedBaseFW;
 @property (readonly) signed char baseBatteryLevel;
 @property (readonly) signed char markerBatteryLevel;
+@property (readonly) BOOL primaryMarkerConnected;
 @property (readonly) NSString* dockFWVersion;
 @property BOOL verticalTrackingEnabled;
 
