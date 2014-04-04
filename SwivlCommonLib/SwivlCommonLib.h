@@ -85,7 +85,8 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 
 - (int)  swivlScriptLoadBlock: (char*)data length:(int)length;
 - (void) swivlScriptRequestBufferState;
-- (void) swivlScriptStartThread;
+- (void) swivlScriptStartThread: (uint16_t)threadStartSymbolLabel mainThreadFlag:(BOOL)mainFlag;
+- (void) swivlScriptStartSingleThread;
 - (void) swivlScriptStop;
 
 @end
