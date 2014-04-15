@@ -37,6 +37,11 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 #define UPDATELATER_MSG             @"Not Now"
 #define SHOWMEHOW_MSG               @"Instructions"
 
+// Audio connector configuration options
+#define AUDIO_CONNECTOR_APPLE       0x00
+#define AUDIO_CONNECTOR_LAPTOP      0x05
+#define AUDIO_CONNECTOR_SPECIAL     0x06
+
 
 @protocol SwivlBaseDelegate <NSObject>
 - (void) swivlLibVersion: (NSDictionary *)dict;	// SwivlCommonLib sets version info in the app with this call at start-up.
@@ -77,9 +82,9 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 - (void) updateBaseSettings:(PanningProgram *) program;
 - (BOOL) baseAudioJackState;
 
-- (void) swivlMoveBase: (MotionDescriptor*)move;
-- (void) swivlStartPan: (BOOL)pan andTilt:(BOOL)tilt;
-- (void) swivlResetPosition;
+- (void) swivlMoveLoad: (MotionDescriptor*)move;
+- (void) swivlMoveStartPan: (BOOL)pan andTilt:(BOOL)tilt;
+- (void) swivlResetPanPosition;
 - (UInt32) swivlLastFinishedMoveId;
 - (UInt32) swivlMoveState;
 
@@ -88,5 +93,23 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 - (void) swivlScriptStartThread: (uint16_t)threadStartSymbolLabel mainThreadFlag:(BOOL)mainFlag;
 - (void) swivlScriptStartSingleThread;
 - (void) swivlScriptStop;
+- (int) swivlScriptSetMemory: (uint8_t)memLabel numParameters:(uint8_t)num buffer:(uint32_t*)buffer;
+
+// Request is not necessary now. Extended state is sent periodically anyway.
+- (void) swivlRequestExtendedState;
+
+- (BOOL) swivlScriptLastIsRunningFlag;
+- (UInt8) swivlScriptLastBufferState;
+
+- (UInt8) swivlLastUsbState;
+- (UInt8) swivlLastAudioConnectorConfig;
+
+// Use one of the pre-defined parameters
+// AUDIO_CONNECTOR_APPLE, AUDIO_CONNECTOR_LAPTOP or AUDIO_CONNECTOR_SPECIAL
+- (void) swivlSetAudioConnectorConfig: (UInt8)config;
+
+- (void) swivlSetCameraTriggerPortWithShutter: (BOOL)shutter andFocus:(BOOL)focus setOnOff:(BOOL)onoff timeout:(UInt32)timeout;
+
+- (void) swivlUsbResetWithConnectorSelect: (BOOL)useMicroUsb;
 
 @end

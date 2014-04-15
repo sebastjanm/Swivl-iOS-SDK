@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'Swivl-iOS-SDK'
-  s.version  = '0.1.5'
+  s.version  = '0.1.7'
   s.license  = 'NO-LICENSE'
   s.summary  = 'Swivl Hardware 2 SDK.'
   s.homepage = 'https://github.com/swivl/Swivl-iOS-SDK'
