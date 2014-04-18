@@ -51,7 +51,7 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 - (void) transitionAppToRecordingView;          // Requests that the app transition itself (programmatically) to the recording view.
 - (void) appTagsRecording;                      // (obsolete?) 
 
-- (void) swivlMoveFinished: (UInt32)state withID:(UInt32)ID;
+- (void) swivlMoveFinished: (int32_t)state withID:(int32_t)ID;
 
 - (void) swivlScriptBufferState: (UInt8)state isRunning:(BOOL)isRunning;
 - (void) swivlScriptResult: (SInt8)thread Result:(SInt8)res Run:(UInt16)run Stack:(UInt32)stack;
@@ -72,6 +72,7 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 @property (readonly) signed char baseBatteryLevel;
 @property (readonly) signed char markerBatteryLevel;
 @property (readonly) BOOL primaryMarkerConnected;
+@property (readonly) BOOL basePowerSupplyConnected;
 @property (readonly) NSString* dockFWVersion;
 @property BOOL verticalTrackingEnabled;
 
@@ -85,8 +86,8 @@ extern NSString* AVSandboxPanningStateChangedNotification; // to update the app;
 - (void) swivlMoveLoad: (MotionDescriptor*)move;
 - (void) swivlMoveStartPan: (BOOL)pan andTilt:(BOOL)tilt;
 - (void) swivlResetPanPosition;
-- (UInt32) swivlLastFinishedMoveId;
-- (UInt32) swivlMoveState;
+- (uint32_t) swivlLastFinishedMoveId;
+- (uint32_t) swivlLastMoveState;
 
 - (int)  swivlScriptLoadBlock: (char*)data length:(int)length;
 - (void) swivlScriptRequestBufferState;
